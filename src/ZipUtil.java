@@ -39,7 +39,7 @@ public class ZipUtil {
                     is.close();
                     out.closeArchiveEntry();
                 } else {
-                    // 空文件夹
+                    //  文件夹
                     String relative = file.getAbsolutePath().substring(path.length() + 1);
                     ZipArchiveEntry entry = new ZipArchiveEntry(file, relative);
                     entry.setSize(file.length());
@@ -63,14 +63,9 @@ public class ZipUtil {
         List<File> allFile = new ArrayList<File>();
 
         for (File file : files) {
-            if (file.isFile()) {
-                allFile.add(file);
-            } else {
-                if (file.list().length == 0) {
-                    allFile.add(file);   // 空文件
-                } else {
-                    allFile.addAll(getAllFile(file));
-                }
+            allFile.add(file);
+            if (file.isDirectory()) {
+                allFile.addAll(getAllFile(file));
             }
         }
 
