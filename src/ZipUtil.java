@@ -7,10 +7,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Zip文件工具类
- * @author Luxh
- */
+
 public class ZipUtil {
 
     static int bufferSize = 8192;
