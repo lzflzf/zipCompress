@@ -1,5 +1,5 @@
 # zipCompress
-使用apache common 工具实现zip压缩
+使用apache common 工具实现zip压缩和解压
 
 
 参考1：https://wenku.baidu.com/view/3e635e44b94ae45c3b3567ec102de2bd9605def1.html
@@ -20,6 +20,8 @@
 4： 参考2中只实现的单个文件和多个文件的压缩，并没有实现文件夹的压缩，但已经是挺完美的了，起码一眼就能看懂。
 
 5： 比原生java的实现效率高。 （第一次压缩耗时943第二次耗时12215;两次耗时相隔11272）
+
+6： File.separator问题。 windows下打的包到Linux下无法解压。
 
 
 
