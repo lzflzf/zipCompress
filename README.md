@@ -1,5 +1,5 @@
 # zipCompress
-使用apache common 工具实现zip压缩
+使用apache common 工具实现zip压缩和解压
 
 
 参考1：https://wenku.baidu.com/view/3e635e44b94ae45c3b3567ec102de2bd9605def1.html
