@@ -79,13 +79,14 @@ public class ZipUtil {
             is = new ZipArchiveInputStream(new BufferedInputStream(new FileInputStream(srcFile), bufferSize));
             ZipArchiveEntry entry = null;
             while ((entry = is.getNextZipEntry()) != null) {
+                String entryname = entry.getName().replace("\\",File.separator).replace("/",File.separator) ;
                 if (entry.isDirectory()) {
-                    File directory = new File(destDir, entry.getName());
+                    File directory = new File(destDir, entryname);
                     directory.mkdirs();
                 } else {
                     OutputStream os = null;
                     try {
-                        os = new BufferedOutputStream(new FileOutputStream(new File(destDir, entry.getName())), bufferSize);
+                        os = new BufferedOutputStream(new FileOutputStream(new File(destDir, entryname)), bufferSize);
                         IOUtils.copy(is, os);
                     } finally {
                         IOUtils.closeQuietly(os);
