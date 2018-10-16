@@ -21,7 +21,7 @@
 
 5： 比原生java的实现效率高。 （第一次压缩耗时943第二次耗时12215;两次耗时相隔11272）
 
-6:   File.separator问题。 windows下打的包到Linux下无法解压。
+6： File.separator问题。 windows下打的包到Linux下无法解压。
 
 
 
